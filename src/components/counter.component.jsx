@@ -9,7 +9,6 @@ export const Counter=()=>{
     // }
 
     useEffect(()=>{
-
         var valid;
         if(isValid){
             valid= setInterval(()=>{
@@ -22,6 +21,7 @@ export const Counter=()=>{
         }
        
     },[isValid])
+
 
     function handler(){
         setIsValid(false)

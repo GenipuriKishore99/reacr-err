@@ -10,7 +10,10 @@ function reducer(state,action){
     }
 
 }
-export const ReducerCount=()=>{
+export const ReducerCount=(props)=>{
+    console.log(props)
+    console.log(props.children);
+    console.log(props.name)
     const [state,dispatch]=useReducer(reducer,initialstate)
 
     const handlerCount=()=>{

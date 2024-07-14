@@ -1,15 +1,18 @@
 import React from 'react'
-import { ReducerCount } from './components/reducercount'
-// import { RegForm } from './components/form/form-component'
-// import EmailOTPGenerator from './email'
+import Navbar from './components/Navbar'
+import Products from './components/Products'
+import { ErrorBoundary } from "react-error-boundary";
 
-function App() {
+import ErrorBoundaries from './components/ErrorBoundary';
+const App = () => {
+  const data={name:"kishore",role:"reactjs Developer"}
+
   return (
     <div>
-      <ReducerCount></ReducerCount>
-      
-      {/* <RegForm></RegForm> */}
-      {/* <EmailOTPGenerator></EmailOTPGenerator> */}
+      <ErrorBoundary fallback={<ErrorBoundaries></ErrorBoundaries>}>
+      <Navbar/>
+      <Products data={data}/>
+      </ErrorBoundary>
     </div>
   )
 }
